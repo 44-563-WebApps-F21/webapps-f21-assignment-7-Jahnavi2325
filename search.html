@@ -22,6 +22,8 @@
     <div style ="color:royalblue"  id="distance">Distance is unknown.</div><br>
   </div>
 
+  <button onclick="newGame()">Reset</button>
+
   <div class="row">
     <div class="col-sm-2">
         <img src ="tree.png" id = 1 onclick=check(0)  width = 200 ; height = 200; alt = "this is a tree"></img>
@@ -156,6 +158,16 @@
             var column = Math.abs(vy - v1y);
             return row + column - 1;
 
+        }
+
+        function newGame(){
+            triesCount = 0
+            animalLocation = Math.floor(Math.random()*23 + 0)
+            document.getElementById("tries").innerHTML = "Number of tries is 0."
+            for(var i=0; i<24; i++){
+                
+                    document.getElementById(ids[i]).src = "appleTree.jpg"
+            }
         }
 
 </script>
